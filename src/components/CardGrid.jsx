@@ -398,7 +398,7 @@ export default function CardGrid() {
         }, {});
         setData(categorizedData);
       } catch (error) {
-        // Handle error if necessary
+
       } finally {
         setLoading(false);
       }
