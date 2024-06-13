@@ -6,36 +6,36 @@ export default function Team () {
         {
             avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713098220/Team/Capture_d_e%CC%81cran_2024-03-21_a%CC%80_01.07.39_siobns.png",
             name: "Joseph Basix ",
-            title: "Founder",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy",
-            linkedin: "javascript:void(0)",
+            title: "Founder || Ir Agronome",
+            desc: "En tant que fondateur,Joseph incarne la vision et l'impulsion initiale de notre projet. Sa passion et son dévouement ont donné naissance à notre initiative",
+            linkedin: "https://www.linkedin.com/in/josephbasix/",
             // twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
-        {
-            avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713098042/Team/assos_eeacxz.webp",
-            name: "Antoinette Mwida",
-            title: "Co-Founder",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy",
-            linkedin: "javascript:void(0)",
-            // twitter: "javascript:void(0)",
-            github: "javascript:void(0)"
-        },
+        // {
+        //     avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713098042/Team/assos_eeacxz.webp",
+        //     name: "Antoinette Mwida",
+        //     title: "Co-Founder",
+        //     desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy",
+        //     linkedin: "javascript:void(0)",
+        //     // twitter: "javascript:void(0)",
+        //     github: "javascript:void(0)"
+        // },
         {
             avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713098042/Team/assos1_ka0kdg.webp",
             name: "Myriam Kapuku",
             title: "Chargé des Relations Extérieures (RE)",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy",
-            linkedin: "javascript:void(0)",
+            desc: "Myriam Kapuku est notre responsable des partenariats et de la représentation externe.",
+            linkedin: "",
             // twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713099489/Team/Capture_d_e%CC%81cran_2024-04-14_a%CC%80_13.55.25_qogwnu.png",
-            name: "Junior Asosa",
-            title: "FullStack developper",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy",
-            linkedin: "javascript:void(0)",
+            avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1714760577/1692197823184_t9liwg.jpg",
+            name: "Dieuleveut Ngele",
+            title: "Co-founder || Fullstack web développer",
+            desc: "Notre co-fondateur, également développeur fullstack, apporte une expertise technique inestimable.Sa maîtrise des langages de programmation et son talent à concrétiser des concepts ont été cruciaux pour l'avancement de notre projet.",
+            linkedin: "https://www.linkedin.com/in/dieuleveut-ngele-767889282/",
             // twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
@@ -43,19 +43,16 @@ export default function Team () {
             avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713099490/Team/Capture_d_e%CC%81cran_2024-04-14_a%CC%80_13.57.07_pio6ln.png",
             name: "Aime Mukendi",
             title: "Marketing Digital",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy",
+            desc: "Sous la houlette de Aime, notre marketing digital est une force imparable. Elle façonne notre présence en ligne avec une stratégie percutante et des campagnes innovantes",
             linkedin: "javascript:void(0)",
             twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713099883/Team/Capture_d_e%CC%81cran_2024-04-14_a%CC%80_14.04.06_puotz5.png",
-            name: "Ntambwa Basambombo",
-            title: "Mentor ex Airbnb",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy",
-            linkedin: "javascript:void(0)",
-            twitter: "javascript:void(0)",
-            github: "javascript:void(0)"
+            avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1715438088/icons/WhatsApp_Image_2024-05-07_at_17.37.40_pz8h6y.jpg",
+            name: "David sadahna",
+            title: "Charger de logistique",
+            desc: "David assure la gestion et l'organisation opérationnelle avec une expertise. Son rôle consiste à coordonner efficacement les activités logistiques."
         },
     ]
 

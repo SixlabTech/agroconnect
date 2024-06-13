@@ -9,7 +9,7 @@ const menuItems = [
     to: "/marketplace",
     dropdown: [
       { title: "Boutique en ligne", to: "/marketplace" },
-      { title: "Pack alimentaire", to: "#" },
+      { title: "Pack alimentaire", to: "/offerForm" },
     ],
   },
 
@@ -40,7 +40,7 @@ const menuItems = [
     dropdown: [
       { title: "Notre Équipe", to: "/team" },
       { title: "Nos Partenaires", to: "" },
-      { title: "Nos Valeurs", to: "" },
+      { title: "Nos Valeurs", to: "ProductDetailPage" },
       { title: "Notre Vision", to: "" },
     ],
   },
@@ -64,7 +64,7 @@ function MenuItem({ item }) {
         <div className="relative">
           <button className="flex items-center gap-2">{item.title} ⌝</button>
           {isOpen && (
-            <ul className="absolute rounded top-full left-0 bg-white z-50">
+            <ul className="absolute shadow-lg  rounded top-full left-0 bg-white z-50">
               {item.dropdown.map((dropdownItem, index) => (
                 <li
                   key={index}
@@ -86,7 +86,7 @@ export default function Navbar() {
   return (
     <div className="flex flex-col -mt-4 mb-1 lg:ml-[40%] sm:flex-row">
       <div className="text-nowrap sm:block pb-3 justify-center font-medium text-sm w-full">
-        <ul className="flex mt-5 flex-wrap gap-12 justify-center">
+        <ul className="flex mt-5 text-text-gray flex-wrap gap-12 justify-center">
           {menuItems.map((item, index) => (
             <MenuItem key={index} item={item} />
           ))}
@@ -95,5 +95,4 @@ export default function Navbar() {
     </div>
   );
 }
-
 

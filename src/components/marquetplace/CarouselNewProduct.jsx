@@ -16,10 +16,7 @@ const Carousel = ({ slides }) => {
           gap: '1rem',
           pagination: false,
           arrows: true,
-        //   arrowPath: {
-        //     prev: 'M6.93 12.02l-2.12-2.12L10.07 4l7.07 7.07-2.12 2.12L10.07 8.24z',
-        //     next: 'M6.93 12.02l-2.12-2.12L10.07 4l7.07 7.07-2.12 2.12L10.07 8.24z',
-        //   },
+          
         }}>
         {slides.map((slide, index) => (
           <SplideSlide key={index}>

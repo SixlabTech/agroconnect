@@ -34,10 +34,11 @@ background-color: #dedede85;
   }
 
 ::placeholder{
-    color: black !important;
+    color: rgb(255, 255, 255) !important;
     font-size: 14px;
     font-weight: 100;
 }
+
 
  .Navigation{
 display: flex;
@@ -80,15 +81,20 @@ width: 27rem;
 /* style for card */
 
 .card__color{
-background: rgba(0, 128, 0, 0.194);
-color: green;
-font-size: 12px;
-width: 5rem;
+color: #f8f9fa;
+
+font-size: 10px;
+width: 4rem;
 font-weight: 500;
 }
-
+.fontsize{
+    font-size: 15px;
+    color: #6c757d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .color_start{
-    color: gold;
+    color: #ea7f0c;
+
 }
 
 .btn__card{
@@ -102,3 +108,137 @@ background-color: rgba(26, 151, 44, 0.401);
 color: white;
 border-radius: 5px;
 } */
+
+
+/* 
+
+.flower {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    animation: explode 0.5s forwards;
+  }
+  
+  @keyframes explode {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translate(0, 0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5) translate(var(--x), var(--y));
+    }
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .animate-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    animation: marquee 10s linear infinite;
+  }
+   */
+
+/* animation explosion  */
+   .flower {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    animation: explode 0.5s forwards;
+    animation-delay: var(--delay);
+  }
+  
+  @keyframes explode {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translate(0, 0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5) translate(var(--x), var(--y));
+    }
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .animate-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    animation: marquee 10s linear infinite;
+  }
+  
+  /* animation explosion  */
+
+  .shopping-cart-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 20%; /* ou la largeur que vous souhaitez */
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding-left: 20%; /* Assurez-vous que le contenu principal ne soit pas masqué par la barre latérale */
+    overflow-y: auto; /* Permet au contenu principal de défiler si nécessaire */
+  }
+  
+
+
+  /* home card */
+  .main-container {
+    overflow: hidden;
+  }
+  
+  .main-container,
+  .main-container * {
+    box-sizing: border-box;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    outline: 0;
+  }
+
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.136);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    background: #b3b2b250;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+  }
+  

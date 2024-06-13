@@ -1,0 +1,24 @@
+{
+  "name": "Tomato Plant",
+  "subCategory":"Produits les plus vendus",
+  "category": "Vegetables",
+  "image": "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713362240/Carousel%20product/6_qly6we.webp",
+  "price": {
+    "amount": 5000,
+    "currency": "FC",
+    "unit": "kg"
+  },
+  "discountedPrice": 4500,
+  "stock": true,
+
+  "discount": {
+    "amount": 10,
+     "unit": "%"
+  },
+  
+  "quantity": {
+    "amount": 100,
+    "unit": "kg"
+  }
+
+}

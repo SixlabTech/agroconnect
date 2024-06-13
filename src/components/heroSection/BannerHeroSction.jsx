@@ -33,7 +33,7 @@ export default function BannerHeroSection() {
 
   return (
     <div
-      className="flex p-2 gap-2  flex-col lg:h-36 md:flex-row md:left-0 md:gap-10 justify-center "
+      className="flex p-2 gap-2  flex-col lg:h-30 md:flex-row md:left-0 md:gap-10 justify-center "
       style={backgroundImage}
     >
       {items.map((item, index) => (

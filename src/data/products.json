@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Riz blanc",
+    "category": "Céréales",
+    "image": "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713362240/Carousel%20product/6_qly6we.webp",
+    "price": {
+      "amount": 5000,
+      "currency": "FC",
+      "unit": "kg"
+    },
+    "discountedPrice": 4500,
+    "stock": true,
+    "start": 5,
+    "ratings": {
+      "count": 20,
+      "reviews": "Commentaires"
+    },
+    "quantity": {
+      "amount": 100,
+      "unit": "kg"
+    },
+    "entity": {
+      "name": "Coopérative",
+      "icon": "https://exemple.com/coop_riziculture.png"
+    },
+    "description": "Le riz blanc est un aliment de base riche en glucides et en énergie, idéal pour accompagner de nombreux plats. Son grain long et parfumé en fait un choix populaire dans de nombreuses cuisines."
+  },
+  {
+    "id": 2,
+    "name": "Bananes plantains",
+    "category": "Fruits",
+    "image": "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713362243/Carousel%20product/2_twbcr6.webp",
+    "price": {
+      "amount": 2000,
+      "currency": "FC",
+      "unit": "kg"
+    },
+    "discountedPrice": "",
+    "stock": true,
+    "start": 2,
+    "ratings": {
+      "count": 15,
+      "reviews": "Commentaires"
+    },
+    "quantity": {
+      "amount": 50,
+      "unit": "kg"
+    },
+    "entity": {
+      "name": "Mabelcope",
+      "icon": "https://exemple.com/plantation_bananes.png"
+    },
+    "description": "Les bananes plantains sont des fruits riches en potassium et en fibres, souvent utilisés dans la cuisine africaine pour préparer des plats sucrés ou salés. Elles sont délicieuses frites, cuites ou grillées."
+  }
+ 
+]
+
