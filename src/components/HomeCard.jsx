@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react";
 import React from "react";
 
@@ -74,8 +72,7 @@ export default function HomeCard({ discount, title, price, oldPrice, image }) {
         <div
           className="absolute inset-0 -mt-2 lg:mb-[0px] mb-[0px] sm:mb-[100px] bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-100 transition-opacity"
           onClick={handleCloseQRCode}
-          onMouseLeave={handleMouseLeaveQRCode}
-        >
+          onMouseLeave={handleMouseLeaveQRCode}>
           <img
             src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1717927262/Vector_ecqsaq.jpg"
             alt=" Grand QR Code"
