@@ -57,7 +57,10 @@ export default function HomeCard({ discount, title, price, oldPrice, image }) {
           <div className="text-[#373F50] ">{title}</div>
           <div className="flex gap-2.5 mt-3.5 items-center whitespace-nowrap">
             <div className="grow text-red leading-[175%]">{price}</div>
-            <div className=" text-gray">{oldPrice}</div>
+            <div className=" relative text-gray">
+              {oldPrice}
+              <span className="absolute -ml-16 mt-2.5    h-1 w-14"><hr /></span>
+              </div>
           </div>
         </div>
         <img
@@ -76,7 +79,7 @@ export default function HomeCard({ discount, title, price, oldPrice, image }) {
           <img
             src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1717927262/Vector_ecqsaq.jpg"
             alt=" Grand QR Code"
-            className=" lg:w-36 lg:h-36  xs:w-20 xs:h-20 "
+            className=" lg:w-52 lg:h-52 lg:-mt-7  xs:w-20 xs:h-20 "
           />
           <div className="text-center xs:mt-5 text-[#F89C0E] text-[9px] px-4">
             Scannez le QR code pour voir l'origine du produit
