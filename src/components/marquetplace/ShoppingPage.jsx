@@ -11,6 +11,7 @@ const ShoppingCartPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const [error, setError] = useState(null); // New state for error handling
 
   const fetchProducts = async () => {
     try {
@@ -19,6 +20,7 @@ const ShoppingCartPage = () => {
       setLoading(false);
     } catch (error) {
       console.error("Error fetching products:", error);
+      setError("Failed to fetch products. Please try again later."); // Set error message
       setProducts([]);
       setLoading(false);
     }
@@ -45,18 +47,18 @@ const ShoppingCartPage = () => {
   };
 
   return (
-    <div className="p-4 w-full  shadow gap-10 flex flex-col lg:flex-row">
+    <div className="p-4 w-full shadow gap-10 flex flex-col lg:flex-row">
 
       {/* Sidebar */}
-      <section className="w-[20%] w-96  ">
+      <section className="w-[20%] w-96">
         <div className="mt-2 p-5">
-        <ProductSearchBar onSearch={handleSearch} /> 
+          <ProductSearchBar onSearch={handleSearch} />
         </div>
-       <ButtonSell/>
+        <ButtonSell />
         <CategoryFilter
           categories={uniqueCategories}
           filterProductsByCategory={filterProductsByCategory}
-          totalProducts={products && products.length} // Check if products exists before accessing its length
+          totalProducts={products && products.length}
         />
         <div className="w-96">
           <h2 className="mt-10 mb-5 text-green ml-8 font-extrabold">NOS PRODUITS</h2>
@@ -65,20 +67,24 @@ const ShoppingCartPage = () => {
             <p className="font-bold text-1xl mb-10">Tous vos produits agricoles en gros</p>
             <p className="text-bg-gold mb-10 font-bold">A partir de 500 kg </p>
           </div>
-          <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713447871/Banner%20publicite/11_fdza96.webp" alt="image banner section categorie rounde-sm"  />
+          <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713447871/Banner%20publicite/11_fdza96.webp" alt="image banner section categorie rounde-sm" />
         </div>
       </section>
 
       <section className="p-5 ml-[5%] rounded shadow border-gray w-full lg:w-3/4">
         <Loader loading={loading} />
-        {!loading && sortedAndFilteredProducts && sortedAndFilteredProducts.length === 0 ? (
-          <p className="text-center">Aucun produit ne correspond à votre recherche</p>
+        {error ? (
+          <p className="text-center text-red-500">{error}</p> // Display error message
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sortedAndFilteredProducts && sortedAndFilteredProducts.map((product) => (
-              <ProductCard key={product._id} product={product} />
-            ))}
-          </div>
+          !loading && sortedAndFilteredProducts && sortedAndFilteredProducts.length === 0 ? (
+            <p className="text-center">Aucun produit ne correspond à votre recherche</p>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {sortedAndFilteredProducts && sortedAndFilteredProducts.map((product) => (
+                <ProductCard key={product._id} product={product} />
+              ))}
+            </div>
+          )
         )}
       </section>
     </div>
