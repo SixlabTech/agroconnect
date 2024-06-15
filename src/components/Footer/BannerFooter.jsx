@@ -35,7 +35,7 @@ export default function BannerFooter() {
 
             <section className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col items-center text-center text-neutral-800 max-md:mt-10">
-                <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1717871361/partenaires/te%CC%81le%CC%81chargement__2_-removebg-preview_px9ukm.png" alt="" className=" w-28" />
+                <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1717871361/partenaires/te%CC%81le%CC%81chargement__2_-removebg-preview_px9ukm.png" alt="logo" className=" w-28" />
                 <div className="mt-5 text-lg font-semibold leading-5">
                   Ingenious City
                 </div>
@@ -50,7 +50,7 @@ export default function BannerFooter() {
 
             <section className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow items-center text-center text-neutral-800 max-md:mt-10">
-                <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1717871360/partenaires/te%CC%81le%CC%81chargement__1_-removebg-preview_y0p6iq.png" alt="" className=" w-[14rem] mt-2" />
+                <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1717871360/partenaires/te%CC%81le%CC%81chargement__1_-removebg-preview_1_ludvjl.png" alt="logo kadea academy" className=" w-[14rem] mt-2" />
                 <div className="mt-5 text-lg font-semibold leading-5">
                   Kadea academy
                 </div>
