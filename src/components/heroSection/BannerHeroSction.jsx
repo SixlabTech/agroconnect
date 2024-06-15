@@ -26,19 +26,19 @@ const items = [
 export default function BannerHeroSection() {
  
   const backgroundImage = {
-    backgroundImage: "url('https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325656/Yellow_bannier_pyoyqn.png')",
-    backgroundSize: "cover",
+    backgroundImage: "url('')",
     backgroundPosition: "center",
+  
+
   };
 
   return (
     <div
-      className="flex p-2 gap-2  flex-col lg:h-30 md:flex-row md:left-0 md:gap-10 justify-center "
-      style={backgroundImage}
-    >
+      className="flex relative z-10 mt-3 p-2 gap-1 rounded-sm flex-col lg:h-30 md:flex-row md:left-0 md:gap-10 justify-center ">
+      {/* <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325656/Yellow_bannier_pyoyqn.png" alt="" className="absolute w-[80rem] h-[3rem] z-20" /> */}
       {items.map((item, index) => (
-        <div key={index} className="flex  gap-4 lg:text-sm  md:text-xs  items-center">
-          <img src={item.imgUrl} alt="SVG" className="w-8 h-8" />
+        <div key={index} className="flex mt-2  gap-4 lg:text-xs  md:text-xs  items-center">
+          <img src={item.imgUrl} alt="SVG" className="w-7 h-7" />
           <div className="flex flex-col">
             <p className="font-medium">{item.title}</p>
             <p className="text-text-gray font-thin">{item.description}</p>
