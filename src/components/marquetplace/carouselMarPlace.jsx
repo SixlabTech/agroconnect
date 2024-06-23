@@ -9,11 +9,6 @@ export default function CarrouselMarketPlace() {
   const slidesData = [
     {
       imgUrl: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1717862849/Banner%20publicite/3_shv0el.jpg",
-      // iconUrl: "",
-      // text: "",
-      // title: "",
-      // sommaire: "",
-      // description: ""
     }
   ];
 
