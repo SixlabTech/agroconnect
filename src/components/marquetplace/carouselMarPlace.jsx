@@ -1,8 +1,6 @@
 
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-
-// Default theme
 import '@splidejs/react-splide/css';
 
 export default function CarrouselMarketPlace() {
