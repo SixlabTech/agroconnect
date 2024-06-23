@@ -1,12 +1,12 @@
 import React from "react";
 import HomeCard from "./HomeCard";
 
-export default function NewProduct({ cards }) {
+const TopSellingCards = ({ data }) => {
   return (
-    <div className="category-section mb-8">
-      <h2 className="category-title text-2xl font-bold mb-4">Nouveaux produits</h2>
+    <div className="w-full mb-8">
+      <h2 className="text-green text-2xl font-bold mb-4">Produit le plus vendus</h2>
       <div className="flex flex-wrap gap-4">
-        {cards.map((card, index) => (
+        {data.map((card, index) => (
           <HomeCard
             key={index}
             discount={card.discount}
@@ -21,3 +21,4 @@ export default function NewProduct({ cards }) {
   );
 };
 
+export default TopSellingCards;
