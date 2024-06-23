@@ -14,7 +14,7 @@ export default function BannerFooter() {
           Découvrez les témoignages
         </div>
         <br />
-        <p>Il nous accompagne dans notre mission commune de réinventer l'agriculture de demain</p>
+        <p className="text-center">Il nous accompagne dans notre mission commune de réinventer l'agriculture de demain</p>
 
         <div className="self-stretch mt-14  mb-10 max-md:mt-10 max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
