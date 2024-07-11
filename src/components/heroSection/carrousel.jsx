@@ -14,9 +14,9 @@ export default function Carrousel() {
       // sommaire: "l'agriculture de demain",
       // description: "lorem ipsum"
     },
-    {
-      imgUrl: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1717862840/Banner%20publicite/banner_2_gyfhtq.jpg",
-    }
+    // {
+    //   imgUrl: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1717862840/Banner%20publicite/banner_2_gyfhtq.jpg",
+    // }
   ];
 
   return (

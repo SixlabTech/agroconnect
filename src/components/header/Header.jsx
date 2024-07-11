@@ -102,7 +102,7 @@ export default function Header() {
       <div className="flex  gap-64 px-4  py-1 bg-white">
         <div className="flex relative justify-center items-center">
           <NavLink to="/">
-            <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325532/logo_cvzsvy.svg" alt="logo" className="w-24 md:ml-10 mt-3" />
+            <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1719474370/ITM/images_1_w0jwz6.jpg" alt="logo" className="w-24 md:ml-10 mt-3" />
           </NavLink>
           <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325620/icons/line_dqk9lw.svg" alt="icon line" className="h-20 lg:ml-52 lg:mt-10 absolute w-2" />
         </div>

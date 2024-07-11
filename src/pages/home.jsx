@@ -17,7 +17,7 @@ export default function Home() {
         <BannerHeroSction />
         <div className="my-8 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mt-10 flex justify-center items-center">
-            <CardGrid />
+            {/* <CardGrid /> */}
           </div>
         </div>
         <div className="mt-8">
