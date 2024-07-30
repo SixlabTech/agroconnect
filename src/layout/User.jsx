@@ -16,9 +16,11 @@ const Sidebar = () => {
           </li>
           <li className="mb-2">
             <a href="#" className="block py-2 px-4 hover:bg-gray-700 rounded">Commandes</a>
+            <p className="text-lg font-semibold mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime esse mollitia, culpa, optio omnis ab eos soluta quam adipisci quod exercitationem porro harum quo consectetur error, eveniet provident cupiditate eaque.</p>
           </li>
           <li className="mb-2">
             <a href="#" className="block py-2 px-4 hover:bg-gray-700 rounded">Clients</a>
+            <p className="text-lg font-semibold mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime esse mollitia, culpa, optio omnis ab eos soluta quam adipisci quod exercitationem porro harum quo consectetur error, eveniet provident cupiditate eaque.</p>
           </li>
           <li className="mb-2">
             <a href="#" className="block py-2 px-4 hover:bg-gray-700 rounded">Statistiques</a>
