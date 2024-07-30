@@ -6,6 +6,7 @@ const Sidebar = () => {
     <div className="bg-gray- text-white h-full">
       <div className="py-4 px-6">
         <h2 className="text-lg font-semibold mb-4">Tableau de Bord</h2>
+        <p className="text-lg font-semibold mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime esse mollitia, culpa, optio omnis ab eos soluta quam adipisci quod exercitationem porro harum quo consectetur error, eveniet provident cupiditate eaque.</p>
         <ul>
           <li className="mb-2">
             <a href="#" className="block py-2 px-4 hover:bg-gray-700 rounded">Vue d'ensemble</a>
