@@ -34,7 +34,7 @@ export default function HomeCarrouselPromo() {
         <div className="ml-16 text-xl leading-5 max-md:ml-0">
           <span className="text-white text-sm font-light">S'inscrire</span>
         </div>
-        <div className="mt-11  text-4xl font-semibold ml-16  max-md:mt-5 max-md:ml-0 max-md:text-3xl max-sm:text-2xl">
+        <div className="mt-11  text-2xl font-semibold ml-16  max-md:mt-5 max-md:ml-0 max-md:text-3xl max-sm:text-1xl">
           15% de réduction sur tous 
           <br />
           nos produits 
@@ -49,7 +49,7 @@ export default function HomeCarrouselPromo() {
       <img 
         src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1717787069/Frame_t4deys.png" 
         alt="Promo"
-        className="w-[39rem]  z-20 h-[30rem] ml-[46%] mt-[10%]  absolute max-md:w-[30rem] max-md:h-[20rem] max-md:ml-[40%] max-sm:w-[15rem] max-sm:h-[15rem] max-sm:ml-[25%]"
+        className="w-[30rem]  z-20 h-[30rem] ml-[46%] mt-[10%]  absolute max-md:w-[30rem] max-md:h-[20rem] max-md:ml-[40%] max-sm:w-[15rem] max-sm:h-[15rem] max-sm:ml-[25%]"
       />
       <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}>
         <h2 className="text-xl font-bold">Créez un compte</h2>
