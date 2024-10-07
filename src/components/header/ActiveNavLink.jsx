@@ -1,20 +1,20 @@
-import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+// import React from "react";
+// import { NavLink, useLocation } from "react-router-dom";
 
-function ActiveNavLink({ to, children }) {
-  const location = useLocation();
+// function ActiveNavLink({ to, children }) {
+//   const location = useLocation();
 
-  const isActive = () => {
-    return location.pathname === to;
-  };
+//   const isActive = () => {
+//     return location.pathname === to;
+//   };
 
-  return (
-    <NavLink
-      to={to}
-      className={isActive() ? "text-blue" : ""}>
-      {children}
-    </NavLink>
-  );
-}
+//   return (
+//     <NavLink
+//       to={to}
+//       className={isActive() ? "text-blue" : ""}>
+//       {children}
+//     </NavLink>
+//   );
+// }
 
-export default ActiveNavLink;
+// export default ActiveNavLink;

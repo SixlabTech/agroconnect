@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css'; // Assurez-vous d'importer les styles Splide
@@ -27,7 +29,7 @@ export default function Carrousel() {
         breakpoints: {
           640: {
             perPage: 1,
-            height: '10rem'
+            height: '10rem',
           },
           768: {
             perPage: 1,
@@ -39,7 +41,7 @@ export default function Carrousel() {
           },
           1280: {
             perPage: 1,
-            height: '60rem'
+            height: '25rem'
           }
         },
         width: '100%',
@@ -47,7 +49,7 @@ export default function Carrousel() {
     >
       {slidesData.map((slide, index) => (
         <SplideSlide key={index}>
-          <div className="relative border mt-5 w-full md:w-full lg:w-full xl:w-5/6 mx-auto  flex" style={{ maxWidth: '1800px' }}>
+          <div className="relative mt-5 w-full md:w-full lg:w-full xl:w-5/6 mx-auto  flex" style={{ maxWidth: '1800px' }}>
             <img src={slide.imgUrl} alt={`Image ${index + 1}`} className="rounded-lg w-full object-cover"/>
           </div>
         </SplideSlide>
