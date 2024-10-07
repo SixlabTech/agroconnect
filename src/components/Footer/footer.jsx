@@ -48,13 +48,13 @@ export default function Footer() {
 
   return (
     <footer className="bg-green relative">
-      <div className="border">
+      {/* <div className="border">
       <img
         src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325531/papers_yhwywj.png"
         alt="image-papers"
         className="rotated-image absolute z-20 md:-mt-[10px] md:w-full sm:mt-3"
       />
-      </div>
+      </div> */}
 
       <div className="mx-auto lg:mt-32  w-full max-w-screen-xl p-4 py-6 ">
         <div className="md:flex md:justify-between">
