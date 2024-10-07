@@ -2,7 +2,7 @@ import React from "react";
 
 const items = [
   {
-    title: "Service 24/  7j/7",
+    title: "Service 24/7j/7",
     description: "Accès instantané à l'assistance",
     imgUrl: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325648/icons/call_center_mr89ns.svg",
   },
@@ -24,24 +24,14 @@ const items = [
 ];
 
 export default function BannerHeroSection() {
- 
-  const backgroundImage = {
-    backgroundImage: "url('')",
-    backgroundPosition: "center",
-  
-
-  };
-
   return (
-    <div
-      className="flex relative z-10 mt-3 p-2 gap-1 rounded-sm flex-col lg:h-30 md:flex-row md:left-0 md:gap-10 justify-center ">
-      {/* <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325656/Yellow_bannier_pyoyqn.png" alt="" className="absolute w-[80rem] h-[3rem] z-20" /> */}
+    <div className="flex flex-col gap-4 p-2 md:p-4  rounded-sm justify-center items-center">
       {items.map((item, index) => (
-        <div key={index} className="flex mt-2  gap-4 lg:text-xs  md:text-xs  items-center">
-          <img src={item.imgUrl} alt="SVG" className="w-7 h-7" />
-          <div className="flex flex-col">
-            <p className="font-medium">{item.title}</p>
-            <p className="text-text-gray font-thin">{item.description}</p>
+        <div key={index} className="flex flex-col items-center text-center gap-2 md:gap-4 w-full md:w-auto">
+          <img src={item.imgUrl} alt="SVG" className="w-6 h-6 md:w-7 md:h-7" />
+          <div className="flex flex-col items-center">
+            <p className="font-medium text-xs md:text-base">{item.title}</p>
+            <p className="text-text-gray font-thin text-xs md:text-sm">{item.description}</p>
           </div>
         </div>
       ))}

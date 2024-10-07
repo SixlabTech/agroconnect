@@ -11,7 +11,6 @@ export default function Home() {
     <div className="  b-0 m-0">
         <div className="flex justify-center  items-center">
           <Modal />
-          
         </div>
         <Carousel />
         <BannerHeroSction />

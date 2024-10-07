@@ -243,3 +243,16 @@ border-radius: 5px;
     width: 90%;
   }
   
+
+  /* footer componenrnt image papers 
+  
+  */
+.rotated-image {
+
+  /* Utilise la propriété 'transform' pour appliquer une rotation */
+  transform: rotate(0.0.9deg);
+
+  /* Définit le point de rotation autour du centre de l'image */
+  transform-origin: center;
+
+}
