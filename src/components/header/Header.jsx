@@ -149,25 +149,6 @@ export default function Header() {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
-          {/* Barre de recherche */}
-          {/* <div className="w-full lg:flex-1 lg:max-w-xl lg:w-auto order-3 lg:order-none">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Rechercher produit ici"
-                className="w-full border pl-4 pr-12 py-2 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3f6341] transition-all duration-200"
-              />
-              <button className={`
-                absolute right-0 top-0 h-full px-4 
-                bg-[#3f6341] text-white rounded-r-md
-                ${styles.buttonHover}
-                transform transition-transform duration-200 hover:scale-105
-              `}>
-                <Search size={18} />
-              </button>
-            </div>
-          </div> */}
-
           {/* Actions */}
           <div className="hidden lg:flex items-center gap-6">
             <NavLink 
@@ -200,7 +181,7 @@ export default function Header() {
         </div>
 
         {/* Navigation principale */}
-        <nav className={`
+        <nav className={` border-border-line
           border-t
           ${isMenuOpen ? 'block' : 'hidden lg:block'}
         `}>
