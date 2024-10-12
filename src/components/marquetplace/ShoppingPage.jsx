@@ -3,7 +3,7 @@ import axios from 'axios';
 import ProductCard from "./ProductCard";
 import CategoryFilter from "./CategoryFilter";
 import Loader from "./Loader";
-import ButtonSell from "../button/ButtonSell";
+// import ButtonSell from "../button/ButtonSell";
 import ProductSearchBar from "./ProductSearchBar";
 
 const ShoppingCartPage = () => {

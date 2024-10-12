@@ -5,6 +5,7 @@ import BannerHeroSction from "../components/heroSection/BannerHeroSction";
 import Modal from "../components/modals/Modal";
 import CardGrid from "../components/CardGrid";
 import BannerFooter from "../components/Footer/BannerFooter";
+import FaqsList from "../components/FaqsList";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <div className="mt-8">
         </div>
         <BannerFooter />
+        <FaqsList/>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouteError } from "react-router-dom";
-import BackToHome from "./button/BackToHome";
 
 
 export default function ErrorPage() {
@@ -9,7 +8,7 @@ export default function ErrorPage() {
 
   return (
     <div className="text-center mt-44" id="error-page">
-           <BackToHome/>
+    
            <br />
       <h1>Oops!</h1>
       <br />
