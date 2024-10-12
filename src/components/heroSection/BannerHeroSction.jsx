@@ -71,13 +71,10 @@ const items = [
 
 export default function BannerHeroSection() {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000, // Temps en millisecondes entre chaque diapositive
+    autoplaySpeed: 6000, // Temps en millisecondes entre chaque diapositive
   };
 
   return (
@@ -85,7 +82,7 @@ export default function BannerHeroSection() {
       <div className="w-full md:hidden">
         <Slider {...settings}>
           {items.map((item, index) => (
-            <div key={index} className="flex gap-10 md:gap-4 w-full md:w-auto">
+            <div key={index} className="flex border-r  gap-10 md:gap-4 w-full md:w-auto">
               <img src={item.imgUrl} alt="SVG" className="w-6 mb-3  items-center ml-[47%] h-6 md:w-7 md:h-7" />
               
               <div className="flex flex-col justify-center gap-1 items-center">
