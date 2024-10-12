@@ -41,7 +41,7 @@ export default function BannerHeroSection() {
         <Slider {...settings}>
           {items.map((item, index) => (
             <div key={index} className="flexgap-10 md:gap-4 w-full md:w-auto">
-              <img src={item.imgUrl} alt="SVG" className="w-6 mb-3  items-center ml-[47%] h-6 md:w-7 md:h-7" />
+              <img src={item.imgUrl} alt="SVG" className="w-6 mb-3  items-center ml-[47%] h-[30%] md:w-7 md:h-7" />
               
               <div className="flex flex-col justify-center gap-1 items-center">
                 <p className="font-medium text-xs md:text-base">{item.title}</p>

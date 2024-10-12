@@ -4,18 +4,17 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css'; // Assurez-vous d'importer les styles Splide
 
+import banner1 from '../../assets/proposedValue/banner_1_oj5qmv.jpg';
+import banner2 from '../../assets/proposedValue/banner_2_gyfhtq.jpg';
+
+
 export default function Carrousel() {
   const slidesData = [
     {
-      imgUrl: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1717862850/Banner%20publicite/banner_1_oj5qmv.jpg",
-      // iconUrl: "",
-      // text: "BIENVENUE SUR AGROCONNECT ",
-      // button: "Aller au Marche",
-      // sommaire: "l'agriculture de demain",
-      // description: "lorem ipsum"
+      imgUrl: banner1,
     },
     {
-      imgUrl: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1717862840/Banner%20publicite/banner_2_gyfhtq.jpg",
+      imgUrl: banner2,
     }
   ];
 
@@ -25,7 +24,7 @@ export default function Carrousel() {
         rewind: true,
         autoplay: true,
         interval: 4500,
-        arrows: true,
+        arrows: false,
         breakpoints: {
           640: {
             perPage: 1,
@@ -49,7 +48,7 @@ export default function Carrousel() {
     >
       {slidesData.map((slide, index) => (
         <SplideSlide key={index}>
-          <div className="relative mt-5 w-full md:w-full lg:w-full xl:w-5/6 mx-auto  flex" style={{ maxWidth: '1800px' }}>
+          <div className="relative  lg:mt-[5rem] w-full md:w-full lg:w-full xl:w-5/6 mx-auto  flex" style={{ maxWidth: '1800px' }}>
             <img src={slide.imgUrl} alt={`Image ${index + 1}`} className="rounded-lg w-full object-cover"/>
           </div>
         </SplideSlide>
