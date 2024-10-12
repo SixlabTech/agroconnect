@@ -60,7 +60,7 @@ const ShoppingCartPage = () => {
           filterProductsByCategory={filterProductsByCategory}
           totalProducts={products && products.length}
         />
-        <div className="w-96">
+        {/* <div className="w-96">
           <h2 className="mt-10 mb-5 text-green ml-8 font-extrabold">NOS PRODUITS</h2>
           <div className="absolute z-50 mt-10 ml-4 text-white">
             <h3 className="font-normal text-xm mb-2">PRODUITS DE GROS</h3>
@@ -68,7 +68,7 @@ const ShoppingCartPage = () => {
             <p className="text-bg-gold mb-10 font-bold">A partir de 500 kg </p>
           </div>
           <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713447871/Banner%20publicite/11_fdza96.webp" alt="image banner section categorie rounde-sm" />
-        </div>
+        </div> */}
       </section>
 
       <section className="p-5 ml-[5%] rounded shadow border-gray w-full lg:w-3/4">

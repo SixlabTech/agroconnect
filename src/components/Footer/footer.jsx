@@ -72,7 +72,8 @@ export default function Footer() {
         </div>
         <hr className="my-6 text-gray  sm:mx-auto lg:my-8" />
         <div className="md:w-[23%] text-white md:ml-[45%] sm:flex sm:items-center sm:ml-[40%] sm:justify-between">
-          <span className="text-sm sm:text-center">
+    
+          <span className="text-sm lg:text-center sm:text-center">
             © 2024 AgroConnect by sixlabs  All Rights Reserved.
           </span>
         </div>
