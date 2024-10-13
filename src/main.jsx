@@ -18,6 +18,7 @@ import ArticleForm from "./components/marquetplace/ArticleForm.jsx";
 import Modal from "./components/modals/Modal.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import ScrollToTop from "./utils/ScrollToTop.jsx";
+import ContactPage from "./components/ContactPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/ContactPage",
+        element: <ContactPage/>,
       },
       {
         path: "MarketPlace",

@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouteError } from "react-router-dom";
+import BackHome from "../ui/BackHome";
 
 
 export default function ErrorPage() {
@@ -16,6 +17,7 @@ export default function ErrorPage() {
       <br />
       <p>
         <i>{error.statusText || error.message}</i>
+        <BackHome/>
       </p>
     </div>
   );

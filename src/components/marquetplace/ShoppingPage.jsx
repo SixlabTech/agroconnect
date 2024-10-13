@@ -54,7 +54,7 @@ const ShoppingCartPage = () => {
         <div className="mt-2 p-5">
           <ProductSearchBar onSearch={handleSearch} />
         </div>
-        <ButtonSell />
+     
         <CategoryFilter
           categories={uniqueCategories}
           filterProductsByCategory={filterProductsByCategory}
