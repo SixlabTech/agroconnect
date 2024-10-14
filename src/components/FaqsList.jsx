@@ -56,7 +56,7 @@ const FaqsSection = () => {
   return (
     <section className="mb-10 mx-auto px-4 md:px-8">
       <div className="space-y-3 text-center mb-15">
-        <h1 className=" mb-5 mt-10 text-gray-800   text-2xl font-bold text-text-green">FAQ</h1>
+        <h1 className=" mb-5 mt-10 text-gray-800 text-green  text-2xl font-bold">FAQ</h1>
         <p className="text-gray-600 max-w-lg   mx-auto text-1xl">
           Votre guide complet pour comprendre comment notre plateforme en ligne révolutionne la chaîne de valeur agricole
         </p>

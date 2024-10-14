@@ -1173,7 +1173,7 @@ export default function Header() {
                 <MenuItem key={index} item={item} isMobile={true} onMouseLeave={closeMobileMenu} />
               ))}
               {menuItems2.map((item, index) => (
-                <MenuItem key={index} item={item} isMobile={true} onMouseLeave={closeMobileMenu} />
+                <MenuItem key={index} item={item} isMobile={false} onMouseLeave={closeMobileMenu} />
               ))}
             </div>
             {/* Liens "Se connecter" et "Créer un compte" */}
