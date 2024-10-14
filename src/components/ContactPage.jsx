@@ -332,24 +332,13 @@ const ContactPage = () => {
           <MapContainer center={[-4.321522, 15.275638]} zoom={13} className="w-full h-full">
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              attribution=''
             />
-            <Marker position={[48.8566, 2.3522]}>
-              <Popup>Notre siège social</Popup>
-            </Marker>
+          
           </MapContainer>
         </div>
       </div>
-
-      {/* Section d'informations supplémentaires */}
-      <FaqsSection />
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <p>&copy; 2024 AgroEntreprise. Tous droits réservés.</p>
-        </div>
-      </footer>
+     <FaqsSection />
     </div>
   );
 };
