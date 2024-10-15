@@ -1,9 +1,9 @@
+
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import apiService from "../../services/apiService";  // Importation du service API
 import ProductCard from "./ProductCard";
 import CategoryFilter from "./CategoryFilter";
 import Loader from "./Loader";
-// import ButtonSell from "../button/ButtonSell";
 import ProductSearchBar from "./ProductSearchBar";
 
 const ShoppingCartPage = () => {
@@ -11,31 +11,33 @@ const ShoppingCartPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-  const [error, setError] = useState(null); // New state for error handling
+  const [error, setError] = useState(null);
 
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get("https://backend-bilanga.onrender.com/api/product");
-      setProducts(response.data);
-      setLoading(false);
-    } catch (error) {
-      console.error("Error fetching products:", error);
-      setError("Failed to fetch products. Please try again later."); // Set error message
-      setProducts([]);
-      setLoading(false);
-    }
-  };
-
+  // Utilisation de useEffect pour récupérer les produits au montage du composant
   useEffect(() => {
-    fetchProducts();
-  }, []);
+    const fetchProducts = async () => {
+      try {
+        setLoading(true); // Début du chargement
+        const productData = await apiService.fetchProducts(); // Appel API
+        setProducts(productData); // Mise à jour des produits
+      } catch (err) {
+        setError(err.message); // Gestion des erreurs
+      } finally {
+        setLoading(false); // Fin du chargement
+      }
+    };
+
+    fetchProducts(); // Appel de la fonction de récupération des produits
+  }, []); // [] : cette fonction se déclenche une seule fois au montage du composant
 
   const filterProductsByCategory = (category) => {
-    setSelectedCategory(category);
+    setSelectedCategory(category); // Mise à jour de la catégorie sélectionnée
   };
 
+  // Extraction des catégories uniques pour le filtrage
   const uniqueCategories = products && products.length > 0 ? [...new Set(products.map((product) => product.category))] : [];
 
+  // Filtrage et tri des produits basés sur la catégorie sélectionnée et le terme de recherche
   const sortedAndFilteredProducts = products && products.filter(
     (product) =>
       (selectedCategory === "" || product.category === selectedCategory) &&
@@ -43,43 +45,37 @@ const ShoppingCartPage = () => {
   );
 
   const handleSearch = (searchValue) => {
-    setSearchTerm(searchValue);
+    setSearchTerm(searchValue); // Mise à jour du terme de recherche
   };
 
   return (
     <div className="p-4 w-full shadow gap-10 flex flex-col lg:flex-row">
-
       {/* Sidebar */}
       <section className="w-[20%] w-96">
         <div className="mt-2 p-5">
+          {/* Barre de recherche pour filtrer les produits */}
           <ProductSearchBar onSearch={handleSearch} />
         </div>
-     
+
+        {/* Filtrage par catégorie */}
         <CategoryFilter
           categories={uniqueCategories}
           filterProductsByCategory={filterProductsByCategory}
           totalProducts={products && products.length}
         />
-        {/* <div className="w-96">
-          <h2 className="mt-10 mb-5 text-green ml-8 font-extrabold">NOS PRODUITS</h2>
-          <div className="absolute z-50 mt-10 ml-4 text-white">
-            <h3 className="font-normal text-xm mb-2">PRODUITS DE GROS</h3>
-            <p className="font-bold text-1xl mb-10">Tous vos produits agricoles en gros</p>
-            <p className="text-bg-gold mb-10 font-bold">A partir de 500 kg </p>
-          </div>
-          <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713447871/Banner%20publicite/11_fdza96.webp" alt="image banner section categorie rounde-sm" />
-        </div> */}
       </section>
 
+      {/* Section des produits */}
       <section className="p-5 ml-[5%] rounded shadow border-gray w-full lg:w-3/4">
         <Loader loading={loading} />
         {error ? (
-          <p className="text-center text-red-500">{error}</p> // Display error message
+          <p className="text-center text-red-500">{error}</p> // Affichage du message d'erreur en cas d'échec
         ) : (
           !loading && sortedAndFilteredProducts && sortedAndFilteredProducts.length === 0 ? (
             <p className="text-center">Aucun produit ne correspond à votre recherche</p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Affichage des produits */}
               {sortedAndFilteredProducts && sortedAndFilteredProducts.map((product) => (
                 <ProductCard key={product._id} product={product} />
               ))}
