@@ -1,46 +1,39 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import apiService from "../services/apiService";  // Importation du service API
 import TopSellingCards from "./TopSellingCards";
 import NewProductsCards from "./NewProductsCards";
 import WholesaleCards from "./WholesaleCards";
 import HomeCarrouselPromo from "../components/promotion/HomeCarrouselPromo";
 
-const fetchCardData = async () => {
-  try {
-    const response = await axios.get("https://backend-bilanga.onrender.com/api/card");
-    return response.data.map(item => ({
-      discount: item.discount,
-      title: item.title,
-      price: item.price,
-      oldPrice: item.oldPrice || null,
-      image: item.image,
-      category: item.category,
-    }));
-  } catch (error) {
-    console.error("Erreur lors de la récupération des données :", error);
-    throw error;
-  }
-};
-
-// Composant principal pour afficher les produits par catégorie
 const CardGrid = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true); // État pour gérer le chargement
+  const [error, setError] = useState(null); // État pour la gestion des erreurs
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const cleanedData = await fetchCardData();
-        setData(cleanedData);
+        setLoading(true); // Début du chargement
+        const cleanedData = await apiService.fetchCards(); // Appel API via le service
+        setData(cleanedData); // Mise à jour des données
       } catch (error) {
-        console.error("Erreur lors du fetch des données:", error);
+        setError(error.message); // Gestion des erreurs
+      } finally {
+        setLoading(false); // Fin du chargement
       }
     };
 
-    fetchData();
-  }, []);
+    fetchData(); // Exécuter la récupération des données au montage
+  }, []); // [] : uniquement au montage du composant
 
-  if (data.length === 0) {
+  // Gestion de l'état de chargement
+  if (loading) {
     return <div>Chargement en cours ...</div>;
+  }
+
+  // Gestion des erreurs
+  if (error) {
+    return <div>Erreur: {error}</div>;
   }
 
   // Filtrer les données par catégorie
@@ -66,4 +59,3 @@ const CardGrid = () => {
 };
 
 export default CardGrid;
-
