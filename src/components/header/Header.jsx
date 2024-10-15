@@ -1137,7 +1137,7 @@ export default function Header() {
             </div>
 
             {/* Actions visibles uniquement en grand écran */}
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden  lg:flex items-center gap-6">
               <NavLink
                 to="/ContactPage"
                 className={`flex items-center gap-2 ${styles.hoverEffect}`}
@@ -1195,10 +1195,10 @@ export default function Header() {
       )}
 
       {/* Navigation en PC */}
-      <div className={`w-full bg-white transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`} style={{ position: 'fixed', top: '80px', left: 0, right: 0, zIndex: 40 }}>
+      <div className={`w-full -mt-5 z-10 bg-white transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`} style={{ position: 'fixed', top: '80px', left: 0, right: 0, zIndex: 40 }}>
         <div className="max-w-7xl lg:mt-5 mx-auto px-4">
-          <nav className="hidden mt-10 h-20 lg:block">
-            <ul className="py-4 flex -mt-5  flex-wrap justify-center lg:gap-12">
+          <nav className="hiddenh-20 lg:block">
+            <ul className="py-4 flex  flex-wrap justify-center lg:gap-12">
               {menuItems.map((item, index) => (
                 <MenuItem key={index} item={item} isMobile={false} />
               ))}
