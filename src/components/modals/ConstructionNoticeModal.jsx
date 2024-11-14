@@ -1,19 +1,28 @@
+/*
+ * Description :
+ * Ce composant affiche une fenêtre modale (popup) lorsqu'une condition spécifique est remplie :
+ * - Si le modal n'a jamais été affiché ou s'il a expiré après une heure, il s'affiche automatiquement.
+ * - Le statut d'affichage est enregistré dans le localStorage pour une gestion persistante.
+ * - Le bouton de fermeture du modal permet de le fermer avec un léger délai.
+ */
 
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
+
+import { useState, useRef, useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import FlowerExplosion from "./FlowerExplosion";
 
-const Modal = () => {
+const ConstructionNoticeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isExploding, setIsExploding] = useState(false);
   const [buttonPosition, setButtonPosition] = useState({ top: 0, left: 0 });
   const buttonRef = useRef(null);
+
   useEffect(() => {
     const modalShown = localStorage.getItem("modalShown");
     if (!modalShown) {
       setIsOpen(true);
       localStorage.setItem("modalShown", "true");
 
+      // Le modal expire après 1 heure
       setTimeout(() => {
         localStorage.removeItem("modalShown");
       }, 1 * 60 * 60 * 1000);
@@ -28,7 +37,6 @@ const Modal = () => {
   }, []);
 
   const closeModal = () => {
-    setIsExploding(true);
     setTimeout(() => {
       setIsOpen(false);
     }, 500);
@@ -47,15 +55,14 @@ const Modal = () => {
             </div>
             <div className="mt-4">
               <p className="text-lg text-center">
-                Site web en construction 
+                Site web en construction
               </p>
             </div>
           </div>
         </div>
       )}
-      {isExploding && <FlowerExplosion position={buttonPosition} />}
     </>
   );
 };
 
-export default Modal;
+export default ConstructionNoticeModal;

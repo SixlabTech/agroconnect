@@ -2,7 +2,7 @@ import React from "react";
 // ** import components **
 import Carousel from "../components/heroSection/carrousel";
 import BannerHeroSction from "../components/heroSection/BannerHeroSction";
-import Modal from "../components/modals/Modal";
+import ConstructionNoticeModal from "../components/modals/ConstructionNoticeModal";
 import CardGrid from "../components/CardGrid";
 import BannerFooter from "../components/Footer/BannerFooter";
 import FaqsList from "../components/FaqsList";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="  b-0 m-0">
         <div className="flex justify-center  items-center">
-          <Modal />
+          <ConstructionNoticeModal />
         </div>
         <Carousel />
         <BannerHeroSction />

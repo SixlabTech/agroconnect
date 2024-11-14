@@ -11,11 +11,11 @@ import Offers from "./pages/Offers";
 import AboutUs from "./pages/AboutUs";
 import Team from "./pages/team";
 import Bourses from "./pages/Bourses";
-import Login from "./pages/auth/login";
+// import Login from "./pages/auth/login";
 import ProductDetailPage from "./components/ProductDetailPage.jsx";
-import SignUp from "./pages/auth/SignUp";
+// import SignUp from "./pages/auth/SignUp";
 import ArticleForm from "./components/marquetplace/ArticleForm.jsx";
-import Modal from "./components/modals/Modal.jsx";
+import ConstructionNoticeModal from "./components/modals/ConstructionNoticeModal.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import ScrollToTop from "./utils/ScrollToTop.jsx";
 import ContactPage from "./components/ContactPage.jsx";
@@ -30,10 +30,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {
-        path: "/login",
-        element: <Login />,
-      },
+      // {
+      //   path: "/login",
+      //   element: <Login />,
+      // },
       {
         path: "/ContactPage",
         element: <ContactPage/>,
@@ -66,13 +66,13 @@ const router = createBrowserRouter([
         path: "Bourses",
         element: <Bourses />,
       },
+      // {
+      //   path: "/signup",
+      //   element: <SignUp />,
+      // },
       {
-        path: "/signup",
-        element: <SignUp />,
-      },
-      {
-        path: "modal",
-        element: <Modal />,
+        path: "ConstructionNoticeModal",
+        element: <ConstructionNoticeModal />,
       },
     ],
   },
