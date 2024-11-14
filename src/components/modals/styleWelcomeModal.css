@@ -1,0 +1,133 @@
+/* WelcomeModal.css */
+
+/* Style pour l'arrière-plan du modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  
+  /* Conteneur principal du modal */
+  .modal-container {
+    background-color: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 768px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeInScale 0.3s ease-in-out;
+  }
+  
+  /* Animation pour l'ouverture du modal */
+  @keyframes fadeInScale {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* En-tête du modal */
+  .modal-header {
+    background: linear-gradient(to right, #047857, #065f46);
+    padding: 24px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Conteneur pour les cartes de services */
+  .services-grid {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  /* Bouton de service */
+  .service-button {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: left;
+    transition: all 0.3s ease;
+    color: white;
+  }
+  
+  /* Effet de gradient de survol pour le bouton */
+  .service-hover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transform: skewX(-12deg);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Pied de page du modal */
+  .modal-footer {
+    padding: 16px;
+    background-color: #f9fafb;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.75rem;
+  }
+  
+  /* Bouton de fermeture du modal */
+  .close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
+    color: white;
+  }
+  
+  .close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Classes pour les dégradés des services */
+  .gradient-green {
+    background: linear-gradient(to right, #34D399, #059669); /* from-green-400 to-green-600 */
+  }
+  
+  .gradient-blue {
+    background: linear-gradient(to right, #60A5FA, #2563EB); /* from-blue-400 to-blue-600 */
+  }
+  
+  .gradient-orange {
+    background: linear-gradient(to right, #FB923C, #EA580C); /* from-orange-400 to-orange-600 */
+  }
+  
+  .gradient-purple {
+    background: linear-gradient(to right, #A78BFA, #7C3AED); /* from-purple-400 to-purple-600 */
+  }
+  
+  /* Classes pour le survol des services */
+  .hover-green:hover {
+    background: linear-gradient(to right, #22C55E, #065F46); /* hover:from-green-500 hover:to-green-700 */
+  }
+  
+  .hover-blue:hover {
+    background: linear-gradient(to right, #3B82F6, #1D4ED8); /* hover:from-blue-500 hover:to-blue-700 */
+  }
+  
+  .hover-orange:hover {
+    background: linear-gradient(to right, #F97316, #C2410C); /* hover:from-orange-500 hover:to-orange-700 */
+  }
+  
+  .hover-purple:hover {
+    background: linear-gradient(to right, #8B5CF6, #6D28D9); /* hover:from-purple-500 hover:to-purple-700 */
+  }
+  
