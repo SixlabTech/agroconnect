@@ -256,3 +256,16 @@ border-radius: 5px;
   transform-origin: center;
 
 }
+
+
+
+.service-button.selected {
+  border: 1px solid gray; /* Exemple d'effet visuel pour un profil sélectionné */
+}
+.close-button.disabled {
+  text-align: center;
+  font-size: 12px;
+  margin-right: 90px;
+  position: absolute;
+  margin-top: 20px;
+}
