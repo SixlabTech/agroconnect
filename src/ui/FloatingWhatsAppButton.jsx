@@ -111,10 +111,7 @@ const FloatingWhatsAppButton = () => {
       {isMenuOpen && (
         <div ref={menuRef}>
           <MessageMenu 
-            messages={messages} 
-            selectedMessage={selectedMessage} 
-            onSelect={setSelectedMessage} 
-          />
+            messages={messages} selectedMessage={selectedMessage} onSelect={setSelectedMessage}/>
         </div>
       )}
 
