@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaPaperPlane } from 'react-icons/fa';
 
@@ -6,6 +7,22 @@ const FloatingWhatsAppButton = () => {
   const [selectedMessage, setSelectedMessage] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Gestion de l'apparition au scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      // Apparaît après 100px de scroll
+      if (window.scrollY > 900) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const messages = {
     message1: "Bonjour, j'aimerais en savoir plus sur AgroConnect et ses services.",
@@ -20,7 +37,6 @@ const FloatingWhatsAppButton = () => {
         `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(selectedMessage)}`,
         '_blank'
       );
-      // Animation de reset
       setIsResetting(true);
       setTimeout(() => {
         setSelectedMessage('');
@@ -36,8 +52,11 @@ const FloatingWhatsAppButton = () => {
     setSelectedMessage(message);
   };
 
+  if (!isVisible) return null;
+
   return (
-    <div className="fixed bottom-8 right-8 z-50">
+    <div className={`fixed bottom-8 right-8 z-50 transition-all duration-500 ease-in-out
+      ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
       {/* Menu des messages */}
       {isMenuOpen && (
         <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-xl w-72 mb-4 overflow-hidden border border-gray-200 
