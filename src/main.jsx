@@ -187,6 +187,98 @@
 /////////////////////////////////
 
 
+// import * as React from "react";
+// import * as ReactDOM from "react-dom/client";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import "./index.css";
+
+// // *** import components
+// import Root from "./routes/root";
+// import Home from "./pages/home";
+// import MarketPlace from "./pages/marketplace";
+// import Offers from "./pages/Offers";
+// import AboutUs from "./pages/AboutUs";
+// import Team from "./pages/team";
+// import Bourses from "./pages/Bourses";
+// import ProductDetailPage from "./components/ProductDetailPage.jsx";
+// import ArticleForm from "./components/marquetplace/ArticleForm.jsx";
+// import ErrorPage from "./components/ErrorPage.jsx";
+// import ScrollToTop from "./utils/ScrollToTop.jsx";
+// import ContactPage from "./components/ContactPage.jsx";
+// import { ModalProvider } from "./context/ModalContext.jsx"; // Import du provider pour le modal
+// import WelcomeModal from "./components/modals/WelcomeModal.jsx"; // Import de la modale de bienvenue
+
+
+// const router = createBrowserRouter(
+//   [
+//     {
+//       path: "/",
+//       element: <Root />,
+//       errorElement: <ErrorPage />,
+//       children: [
+//         {
+//           path: "/",
+//           element: <Home />,
+//         },
+//         {
+//           path: "/ContactPage",
+//           element: <ContactPage />,
+//         },
+//         {
+//           path: "MarketPlace",
+//           element: <MarketPlace />,
+//         },
+//         {
+//           path: "Offers",
+//           element: <Offers />,
+//         },
+//         {
+//           path: "AboutUs",
+//           element: <AboutUs />,
+//         },
+//         {
+//           path: "ArticleForm",
+//           element: <ArticleForm />,
+//         },
+//         {
+//           path: "Team",
+//           element: <Team />,
+//         },
+//         {
+//           path: "ProductDetailPage",
+//           element: <ProductDetailPage />,
+//         },
+//         {
+//           path: "Bourses",
+//           element: <Bourses />,
+//         },
+//         {
+//           path: "WelcomeModal",
+//           element: <WelcomeModal />,
+//         },
+//       ],
+//     },
+//   ],
+//   {
+//     // Ajout du future flag ici
+//     future: {
+//       v7_normalizeFormMethod: true,
+//     },
+//   }
+// );
+
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     {/* Envelopper l'application dans le ModalProvider pour rendre le contexte accessible */}
+//     <ModalProvider>
+//       <RouterProvider router={router}>
+//         <ScrollToTop />
+//       </RouterProvider>
+//     </ModalProvider>
+//   </React.StrictMode>
+// );
+
+
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -207,7 +299,7 @@ import ScrollToTop from "./utils/ScrollToTop.jsx";
 import ContactPage from "./components/ContactPage.jsx";
 import { ModalProvider } from "./context/ModalContext.jsx"; // Import du provider pour le modal
 import WelcomeModal from "./components/modals/WelcomeModal.jsx"; // Import de la modale de bienvenue
-
+import FloatingWhatsAppButton from "./ui/FloatingWhatsAppButton.jsx"; // Import du bouton WhatsApp
 
 const router = createBrowserRouter(
   [
@@ -273,6 +365,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <ModalProvider>
       <RouterProvider router={router}>
         <ScrollToTop />
+        {/* Ajouter le bouton WhatsApp flottant globalement */}
+        <FloatingWhatsAppButton />
       </RouterProvider>
     </ModalProvider>
   </React.StrictMode>

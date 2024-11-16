@@ -1,0 +1,55 @@
+/* Positionnement du bouton WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Espacement du bas de la page */
+    right: 20px; /* Espacement de la droite de la page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #3F6341; /* Couleur de fond WhatsApp */
+    border-radius: 50%; /* Forme arrondie */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombre douce autour du bouton */
+    color: white; /* Icône en blanc */
+    font-size: 28px;
+    transition: all 0.3s ease; /* Transition douce pour les animations */
+    z-index: 1000; /* S'assurer que le bouton est au-dessus de tout */
+  }
+  
+  /* Animation de survol */
+  .whatsapp-button:hover {
+    background-color: #3F6341; /* Couleur WhatsApp légèrement plus foncée */
+    transform: scale(1.1); /* Légère augmentation de la taille au survol */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
+  }
+  
+  /* Animation subtile de rebond */
+  .whatsapp-button {
+    animation: bounce 2s infinite; /* Animation de rebond */
+  }
+  
+  /* Définition de l'animation de rebond */
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Assurez-vous que l'icône soit bien centrée */
+  .whatsapp-button svg {
+    display: block;
+  }
+  
