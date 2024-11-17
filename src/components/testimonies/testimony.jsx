@@ -68,8 +68,8 @@ const Testimony = () => {
 
     <div>
 
-      <div className="mt-12 text-3xl   font-bold leading-8 text-center text-green max-md:max-w-full">
-        Ce que nos clients disent de nous
+      <div className="mt-12 text-2xl   font-bold leading-8 text-center text-green max-md:max-w-full">
+        Ce que nos clients <br /> disent de nous
       </div>
 
       {/* <p className="text-center text-lg font-light text-neutral-600">

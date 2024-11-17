@@ -23,6 +23,17 @@ size: 12px;
     --link-color: #007bff; /* Bleu des liens */
     --link-hover-color: #0056b3; /* Bleu des liens au survol */
   }
+
+  /* Cacher la scrollbar mais garder le défilement */
+.containerss {
+  overflow: auto; /* Permet le défilement */
+}
+
+/* Pour les navigateurs WebKit (Chrome, Safari, Edge) */
+.containerss::-webkit-scrollbar {
+  display: none; /* Cache la scrollbar */
+}
+
   
  /* header font style */
   .font__style{

@@ -82,6 +82,7 @@ import CardGrid from "../components/CardGrid";
 import BannerFooter from "../components/Footer/BannerFooter";
 import FaqsList from "../components/FaqsList";
 import Testimony from "../components/testimonies/testimony";
+import CategorieProduit from "../components/Footer/CategorieProduit/CategorieProduit";
 
 export default function Home() {
   const { hasSeenWelcomeModal, markModalAsSeen } = useModal();
@@ -106,6 +107,11 @@ export default function Home() {
       {isModalOpen && <WelcomeModal onClose={handleModalClose} />}
 
       <Carousel />
+      <div className="w-[90%] lg:ml-[5%]">
+      {/* <CategorieProduit/> */}
+      </div>
+     
+ 
       <BannerHeroSction />
       <div className="my-8 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mt-10 flex justify-center items-center">

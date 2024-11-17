@@ -301,6 +301,7 @@ import { ModalProvider } from "./context/ModalContext.jsx"; // Import du provide
 import WelcomeModal from "./components/modals/WelcomeModal.jsx"; // Import de la modale de bienvenue
 import FloatingWhatsAppButton from "./ui/FloatingWhatsAppButton.jsx"; // Import du bouton WhatsApp
 import Testimony from "./components/testimonies/testimony.jsx";
+import CategorieProduit from "./components/Footer/CategorieProduit/CategorieProduit.jsx";
 
 const router = createBrowserRouter(
   [
@@ -353,6 +354,11 @@ const router = createBrowserRouter(
           path: "Testimony ",
           element: <Testimony />,
         },
+        {
+          path: "CategorieProduit ",
+          element:<CategorieProduit/>,
+        },
+     
       ],
     },
   ],
