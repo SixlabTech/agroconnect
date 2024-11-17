@@ -48,14 +48,20 @@ export default function Team () {
   return (
     <div>
         <section className="py-14">
+        <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[70%] xl:w-[80%] mx-auto rounded-md py-10 sm:py-14 md:py-36 bg-text-green">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center text-white leading-tight">
+        Rencontrez Notre Équipe
+        </h1>
+        <p className="text-center mt-5 text-white">
+                        Découvrez les visages derrière notre entreprise, ceux qui travaillent <br /> chaque jour pour transformer nos idées en réalité.
+                    </p>
+      </div>
             <div className="max-w-screen-xl mt-5 mx-auto px-4 mb-12 md:px-8">
                 <div className="max-w-xl mx-auto text-center">
                     <h3 className="text-gray text-3xl font-semibold sm:text-4xl">
-                        Rencontrez Notre Équipe
+                      
                     </h3>
-                    <p className="mt-3">
-                        Découvrez les visages derrière notre entreprise, ceux qui travaillent chaque jour pour transformer nos idées en réalité.
-                    </p>
+               
                 </div>
                 <div className="mt-12">
                     <ul className="grid gap-8 lg:grid-cols-2 md:grid-cols-1">

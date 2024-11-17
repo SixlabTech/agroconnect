@@ -1,0 +1,65 @@
+/* Conteneur principal du carrousel */
+.carrousel-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Cache les images qui débordent */
+}
+
+/* Conteneur du carrousel */
+.carrousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Limite la largeur du carrousel */
+  height: 80vh; /* Hauteur relative pour que l'image prenne plus d'espace */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Conteneur de l'image */
+.carrousel-image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Styles pour l'image */
+.carrousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Change 'cover' à 'contain' pour éviter le zoom */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Boutons de navigation */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* Styles responsive */
+@media (max-width: 768px) {
+  .carrousel {
+    height: 10vh; /* Réduit la hauteur sur mobile pour une meilleure expérience */
+  }
+}

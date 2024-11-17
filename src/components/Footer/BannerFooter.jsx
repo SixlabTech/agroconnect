@@ -78,7 +78,7 @@ import React from "react";
  */
 export default function BannerFooter() {
   return (
-    <div className="relative flex flex-col justify-center items-center px-16 py-20 min-h-[505px] max-md:px-5 overflow-hidden">
+    <div className="relative flex flex-col justify-center items-center px-16 py-0 min-h-[px] max-md:px-5 overflow-hidden">
       <img
         src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325533/Testimonialbanner_pi3fss.png"
         alt=""
@@ -87,7 +87,7 @@ export default function BannerFooter() {
       <div className="relative flex flex-col items-center w-full max-w-[1065px] max-md:max-w-full">
         <div className="shrink-0 h-1 bg-orange-300 rounded-md w-[46px]" />
         <div className="mt-7 text-2xl font-bold leading-7 text-center text-green max-md:max-w-full">
-          Découvrez les témoignages
+          Découvrez nos partainres
         </div>
         <br />
         <p className="text-center">Il nous accompagne dans notre mission commune de réinventer l'agriculture de demain</p>

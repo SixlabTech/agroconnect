@@ -81,6 +81,7 @@ import BannerHeroSction from "../components/heroSection/BannerHeroSction";
 import CardGrid from "../components/CardGrid";
 import BannerFooter from "../components/Footer/BannerFooter";
 import FaqsList from "../components/FaqsList";
+import Testimony from "../components/testimonies/testimony";
 
 export default function Home() {
   const { hasSeenWelcomeModal, markModalAsSeen } = useModal();
@@ -112,7 +113,9 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-8"></div>
+     
       <BannerFooter />
+      <Testimony/>
       <FaqsList />
     </div>
   );

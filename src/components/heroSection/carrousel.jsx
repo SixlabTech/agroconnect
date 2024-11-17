@@ -4,14 +4,14 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css'; // Assurez-vous d'importer les styles Splide
 
-import banner1 from '../../assets/proposedValue/banner_1_oj5qmv.jpg';
+
 import banner2 from '../../assets/proposedValue/banner_2_gyfhtq.jpg';
 
 
 export default function Carrousel() {
   const slidesData = [
     {
-      imgUrl: banner1,
+      imgUrl:"https://res.cloudinary.com/dqrs3xyic/image/upload/v1731805501/Shoppers_sss-1731596683823-1731670941890_kkbnbb.jpg",
     },
     {
       imgUrl: banner2,
@@ -44,12 +44,12 @@ export default function Carrousel() {
           }
         },
         width: '100%',
-      }}
+        height:'70%'      }}
     >
       {slidesData.map((slide, index) => (
         <SplideSlide key={index}>
-          <div className="relative  lg:mt-[5rem] w-full md:w-full lg:w-full xl:w-5/6 mx-auto  flex" style={{ maxWidth: '1800px' }}>
-            <img src={slide.imgUrl} alt={`Image ${index + 1}`} className="rounded-lg w-full object-cover"/>
+          <div className="relative lg:mt-[5rem] w-full md:w-full lg:w-full xl:w-5/6 mx-auto  flex">
+            <img src={slide.imgUrl} alt={`Image ${index + 1}`} className="lg:rounded-lg  xl:rounded-lg "/>
           </div>
         </SplideSlide>
       ))}
