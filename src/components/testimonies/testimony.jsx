@@ -13,7 +13,7 @@ const testimonies = [
   },
   {
     name: 'Emmanuelle Nsimba',
-    role: 'Productrice de légumes',
+    role: 'Producteur de légumes',
     message:
       'Agroconnect m’a aidée à gérer mes stocks et à trouver de nouveaux clients à Kinshasa,\n un véritable levier pour mon entreprise.',
     image: 'https://res.cloudinary.com/dqrs3xyic/image/upload/v1731850678/close-up-upset-american-black-person_s88bvx.jpg', // Remplacez par le lien réel de l'image
@@ -31,7 +31,7 @@ const testimonies = [
     name: 'Amina Nguema',
     role: 'Entrepreneure en agriculture',
     message:
-      'Agroconnect facilite l’accès à de nouveaux marchés J’ai pu diversifier mes sources de revenus grâce à leurs solutions.',
+      'Agroconnect facilite l’accès à de nouveaux marchés \n J’ai pu diversifier mes sources de revenus grâce à leurs solutions.',
     image: 'https://res.cloudinary.com/dqrs3xyic/image/upload/v1731850664/beautiful-african-woman-face-portrait-close-up_inpfkc.jpg', // Remplacez par le lien réel de l'image
     rating: 5, // Note sur 5 étoiles
   },
