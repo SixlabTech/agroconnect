@@ -1,0 +1,54 @@
+/* MobileButtonBar.css */
+
+/* Barre de navigation mobile */
+.mobile-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3F6341; /* Vert uni */
+  color: #ffffff; /* Texte en blanc */
+  padding: 0.75rem 0; /* Réduit la hauteur pour plus d'espace */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 50;
+
+}
+
+.mobile-navbar .nav-button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+  border-radius: 0.75rem;
+  font-size: 0.875rem; /* Taille de texte réduite */
+}
+
+
+.mobile-navbar .nav-button .icon {
+  font-size: 1.5rem; /* Icônes plus petites */
+  margin-bottom: 0.3rem; /* Moins d'espace entre l'icône et le texte */
+}
+
+.mobile-navbar .nav-button span {
+  font-size: 0.75rem; /* Réduit la taille du texte sous l'icône */
+}
+
+/* Couleur de survol personnalisée pour chaque bouton */
+.mobile-navbar .nav-button.boutique:hover {
+  background-color: #F7C35F; /* Jaune pour boutique */
+}
+
+.mobile-navbar .nav-button.panier:hover {
+  background-color: #fb1414; /* Rouge pour panier */
+}
+
+.mobile-navbar .nav-button.commandes:hover {
+  background-color: #ff7849; /* Orange pour commandes */
+}
+
+.mobile-navbar .nav-button.parametres:hover {
+  background-color: #F89C0E; /* Or pour paramètres */
+}

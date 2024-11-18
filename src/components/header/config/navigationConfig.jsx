@@ -5,7 +5,7 @@ import { Mail, User, Heart, ShoppingCart } from "lucide-react";
 
 export const navigationConfig = {
     mainMenu: [
-      { title: "Accueil", to: "/" },
+      // { title: "Accueil", to: "/" },
       {
         title: "Boutique en ligne",
         to: "/marketplace",
@@ -17,7 +17,7 @@ export const navigationConfig = {
       {
         title: "Marchés",
         dropdown: [
-          { title: "Tableau de bords", to: "/calendar" },
+          { title: "Prix du marcher", to: "/calendar" },
           { title: "Prix du Maïs", to: "" },
           { title: "Prix du Manioc", to: "" },
           { title: "Prix du Sorgho", to: "" },

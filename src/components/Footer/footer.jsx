@@ -46,17 +46,12 @@ export default function Footer() {
     },
   ];
 
+  // Obtenez l'année actuelle
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-green relative">
-      {/* <div className="border">
-      <img
-        src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325531/papers_yhwywj.png"
-        alt="image-papers"
-        className="rotated-image absolute z-20 md:-mt-[10px] md:w-full sm:mt-3"
-      />
-      </div> */}
-
-      <div className="mx-auto lg:mt-32  w-full max-w-screen-xl p-4 py-6 ">
+      <div className="mx-auto lg:mt-32 w-full max-w-screen-xl p-4 py-6 ">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <img
@@ -64,17 +59,16 @@ export default function Footer() {
               alt="logo footer"
             />
           </div>
-          <div className="grid font-thin  xl:gap-36 grid-cols-2 md:flex md:space-x-7">
+          <div className="grid font-thin xl:gap-36 grid-cols-2 md:flex md:space-x-7">
             {footerLinkSections.map((section, index) => (
               <FooterSection key={index} title={section.title} links={section.links} />
             ))}
           </div>
         </div>
-        <hr className="my-6 text-gray  sm:mx-auto lg:my-8" />
-        <div className="md:w-[23%] text-white md:ml-[45%] sm:flex sm:items-center sm:ml-[40%] sm:justify-between">
-    
-          <span className="text-sm lg:text-center sm:text-center">
-            © 2024 AgroConnect by sixlabs  All Rights Reserved.
+        <hr className="my-6 text-gray sm:mx-auto lg:my-8" />
+        <div className="md:w-[23%] text-white md:ml-[45%] sm:flex sm:items-center sm:ml-[20%] sm:justify-between">
+          <span className="text-sm text-center sm:text-center">
+            © {currentYear} AgroConnect by sixlabs  All Rights Reserved.
           </span>
         </div>
       </div>

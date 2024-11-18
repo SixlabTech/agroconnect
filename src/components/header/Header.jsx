@@ -217,6 +217,8 @@ const MenuItem = ({ item, isMobile = false }) => {
   );
 };
 
+
+
 const MobileMenu = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   
@@ -251,7 +253,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
 
           <div className={styles.mobileSidebar.footer}>
             <div className="space-y-4">
-              <div className="flex flex-col space-y-2">
+              {/* <div className="flex flex-col space-y-2">
                 {navigationConfig.actionItems.map((item, index) => (
                   <IconLink 
                     key={index} 
@@ -259,7 +261,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                     className="flex items-center p-2 hover:bg-gray-100 rounded"
                   />
                 ))}
-              </div>
+              </div> */}
               <div className="pt-4">
                 <NavLink to="/connexion" className={styles.actionButton}>
                   Se connecter
