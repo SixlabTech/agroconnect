@@ -88,7 +88,7 @@ const Testimony = () => {
                   <img
                     src={testimony.image}
                     alt={testimony.name}
-                    className="w-[100px] h-[100px] rounded-full border-4 border-yellow-500 mb-4"
+                    className="w-[100px] h-[100px] rounded-full border-4 border-bg-gold mb-4"
                   />
                   <div className="text-xl font-semibold text-green-600 mb-2">{testimony.name}</div>
                   <div className="text-sm font-medium text-gray-600 mb-4">{testimony.role}</div>
