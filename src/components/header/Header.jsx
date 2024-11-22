@@ -16,7 +16,7 @@ const styles = {
   actionButton: "block font-thin bg-[#3f6341] text-white rounded-lg w-full py-1 px-3 text-center hover:bg-[#2d4830]",
   searchBar: "relative hidden lg:flex items-center",
   mobileSidebar: {
-    overlay: "fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-all duration-300", // Modifié pour plus de transparence et effet de flou
+    overlay: "fixed inset-0 bg-black/50 backdrop-blur-sm z-50 transition-all duration-300", // Modifié pour plus de transparence et effet de flou
     container: "fixed w-[95%] top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50",
     content: "flex flex-col h-full",
     header: "flex items-center justify-between p-4",
