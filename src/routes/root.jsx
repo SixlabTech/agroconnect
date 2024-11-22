@@ -24,7 +24,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/header/Header";
 import Footer from "../components/Footer/footer";
 import FloatingWhatsAppButton from "../ui/FloatingWhatsAppButton"; // Import du bouton WhatsApp flottant
-import MobileButtonBar from "../global/MobileButtonBa";
+import NavbarMobile from "../view/mobile/navbar/NavbarMobile";
 
 export default function Root() {
   return (
@@ -41,7 +41,7 @@ export default function Root() {
 
       {/* Footer */}
       <div>
-        <MobileButtonBar/>
+        <NavbarMobile/>
         <Footer />
       </div>
 
