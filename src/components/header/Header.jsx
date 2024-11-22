@@ -5,7 +5,7 @@ import { Menu, X, Mail, User, Heart, ShoppingCart, Search } from "lucide-react";
 import { navigationConfig } from "./config/navigationConfig"; // Importation de la configuration
 // Constants et configurations
 const SCROLL_THRESHOLD = 0;
-const ICON_SIZE = 18;
+const ICON_SIZE = 20;
 
 const styles = {
   hoverEffect: "hover:text-[#3f6341] transition-colors duration-200",
